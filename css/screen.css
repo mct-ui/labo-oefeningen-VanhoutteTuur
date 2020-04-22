@@ -2,6 +2,24 @@
   #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "Clear Sans";
+    font-weight: 200;
+    src: url("../fonts/ClearSans-Light-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    font-weight: 400;
+    src: url("../fonts/ClearSans-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    font-weight: 600;
+    src: url("../fonts/ClearSans-Medium-webfont.woff") format("woff");
+}
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -13,12 +31,16 @@
 */
 
 html {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: Helvetica, arial, sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 200;
+    font-family: "Clear Sans", arial, sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(to bottom right, #0a257d, #061649);
+    background-attachment: fixed;
+    color: white;
 }
 
 *,
@@ -35,13 +57,13 @@ html {
  */
 
 ::-moz-selection {
-    background: #0053FB;
+    background: #0053fb;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #0053FB;
+    background: #0053fb;
     color: white;
     text-shadow: none;
 }
@@ -99,6 +121,10 @@ h6 {
     margin: 0 0 24px;
 }
 
+p {
+    max-width: 32em;
+}
+
 p,
 ol,
 ul,
@@ -146,15 +172,15 @@ hr {
 }
 
 a {
-    color: #1195F7;
-    transition: all .1s ease-in-out;
+    color: #1195f7;
+    transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active,
 a:hover,
 a:focus {
-    color: #8EC7FF;
+    color: #8ec7ff;
 }
 
 /*------------------------------------*\
@@ -205,7 +231,7 @@ a:focus {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 56.4em; /* 56.4 * 20px = 1128px */
+    max-width: 71em; /* 71 * 18px = 1278px */
 }
 
 /*
@@ -248,9 +274,9 @@ a:focus {
     flex-wrap: wrap;
 }
 
-    .o-layout__item {
-        flex-basis: 100%;
-    }
+.o-layout__item {
+    flex-basis: 100%;
+}
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -364,6 +390,66 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-nav {
+    line-height: 24px;
+    margin-left: -8px;
+}
+.c-header {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .c-header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.c-header__nav {
+}
+
+.c-nav__list {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .c-nav__list {
+        display: flex;
+    }
+}
+
+.c-nav__item {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .c-nav__item {
+        padding: 12px;
+    }
+}
+
+
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    text-decoration: none;
+    color: white;
+}
+
+.c-nav__item:hover {
+    color: #DBEDFF;
+    text-shadow: 2px 2px 4px white;
+}
+
 
 /*------------------------------------*\
   #UTILITIES
