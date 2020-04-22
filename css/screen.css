@@ -436,8 +436,6 @@ a:focus {
     }
 }
 
-
-
 .c-nav__link,
 .c-nav__link:visited,
 .c-nav__link:active {
@@ -446,10 +444,24 @@ a:focus {
 }
 
 .c-nav__item:hover {
-    color: #DBEDFF;
+    color: #dbedff;
     text-shadow: 2px 2px 4px white;
 }
 
+.c-cta {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+    padding: 24px;
+    text-align: center;
+}
+
+.c-cta__link .c-cta__link:visited,
+.c-cta__link:active {
+    text-decoration: none;
+    color: white;
+}
 
 /*------------------------------------*\
   #UTILITIES
